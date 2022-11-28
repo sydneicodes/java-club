@@ -1,0 +1,52 @@
+<%- include('partials/header') -%>
+
+  <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+
+    <h3>Pending Orders</h3>
+  </div>
+
+  <% if(pendingOrders[i].length == 0) { %>
+    <p>No Pending Orders!</p>
+    <% } %>
+      <ul>
+        <% for(var i=0; i <pendingOrders.length; i++) {%>
+          <div>
+          <li>
+            <span>
+              <%= pendingOrders[i].customerName %>
+            </span>
+            <p>Order: <%= pendingOrders[i].size %>
+            </p>
+            <p>Order: <%= pendingOrders[i].drink %>
+            </p>
+            <form class="col-1" action="/post/completeOrder/<%= pendingOrders[i].id %>?_method=PUT" method="POST">
+              <button class="btn btn=primary bi bi-check-square" type="submit"></button>
+            </form>
+          </li>
+          <% } %>
+        </div>
+      </ul>
+
+      <div>
+        <h3>Completed Orders:</h3>
+      </div>
+      <ul>
+        <% for(var i=0; i <completedOrders.length; i++) {%>
+          <div>
+            <li>
+              <span>Barista: <%= completedOrders[i].baristaName%>
+              </span>
+              <p>Customer Name: <%= completedOrders[i].customerName %>
+              </p>
+              <p>Order: <%= completedOrders[i].size %>
+                  <%= completedOrders[i].drink %>
+              </p>
+              <form class="col-2" action="/post/deleteCompletedOrder/<%= completedOrders[i].id %>?_method=DELETE" method="POST">
+                <button class="btn btn=primary bi bi-x-square" type="submit"></button>
+              </form>
+            </li>
+          </div>
+          <% } %>
+      </ul>
+
+      <%- include('partials/footer') -%>

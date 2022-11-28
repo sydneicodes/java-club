@@ -1,0 +1,88 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+    <div class="row justify-content-around mt-5">
+        <a href="/login" class="col-3 btn btn-primary"> Login</a>
+        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+    </div>
+</main>
+
+<div class="jumbotron text-center">
+    <h1>High Grounds</h1>
+    <div class="orderingSystem">
+        <form action="/" method="POST">
+            <div>
+                <input type="text" name="customerName" placeholder="Enter Customer Name">
+            </div>
+
+            <div id="sizes">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="size"
+                value="Small" id="small">
+                <label class="btn btn-outline-primary" for="btncheck1">Small</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="size"
+                value="Medium" id="medium">
+                <label class="btn btn-outline-primary" for="btncheck1">Medium</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="size"
+                value="Large" id="large">
+                <label class="btn btn-outline-primary" for="btncheck1">Large</label>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+
+                <label class="btn btn-outline-primary" for="btncheck1">Drip Coffee</label>
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="drink"
+                    value="Drip Coffee" id="dripCoffee">
+
+                <label class="btn btn-outline-primary" for="btncheck2">Cold Brew</label>
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="drink"
+                    value="Cold Brew" id="coldBrew">
+
+                <label class="btn btn-outline-primary" for="btncheck3">Espresso</label>
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="drink"
+                    value="Espresso" id="espresso">
+                
+                <label class="btn btn-outline-primary" for="btncheck4">Americano</label>
+                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" name="drink"
+                    value="Americano" id="americano">
+                
+                <label class="btn btn-outline-primary" for="btncheck5">Macchiato</label>
+                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" name="drink"
+                    value="Macchiato" id="macchiato">
+
+                <label class="btn btn-outline-primary" for="btncheck6">Cappucino</label>
+                <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" name="drink"
+                    value="Cappuccino" id="cappucino">
+                
+                <label class="btn btn-outline-primary" for="btncheck7">Cortado</label>
+                <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" name="drink" value="Cortado" id="cortado">
+                
+                <label class="btn btn-outline-primary" for="btncheck8">House Blend</label>
+                <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off" name="drink"
+                    value="House Blend" id="houseBlend">
+                
+                <label class="btn btn-outline-primary" for="btncheck9">Latte</label>
+                <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" name="drink" value="Latte" id="latte">
+                
+                <label class="btn btn-outline-primary" for="btncheck10">Mocha</label>
+                <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" name="drink" value="Mocha" id="mocha">
+        
+                <label class="btn btn-outline-primary" for="btncheck11">Iced Tea</label>
+                <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off" name="drink"
+                    value="Iced Tea" id="icedTea">
+    
+                <label class="btn btn-outline-primary" for="btncheck12">Hot Tea</label>
+                <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off" name="drink"
+                    value="Hot Tea" id="hotTea">
+
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit">Submit Order</button>
+            </div>
+        </form>
+    </div>
+
+    
+
+<%- include('partials/footer') -%>
